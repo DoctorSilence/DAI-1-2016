@@ -1,4 +1,4 @@
-/*
+/*Insertar valores ejemplos correspondientes a la tabla ‘escuela’*/
 INSERT INTO escuela VALUES(
 	1,
 	'Forja',
@@ -34,10 +34,9 @@ INSERT INTO escuela VALUES(
 	'Olinca',
 	'Rio Hondo 1'
 );
-*/
 
 
-
+/*Insertar valores ejemplos correspondientes a la tabla ‘alumno’*/
 INSERT INTO alumno VALUES(
 	1,
 	'Fabian Orduña',
@@ -89,7 +88,7 @@ INSERT INTO alumno VALUES(
 );
 
 
-
+/*Insertar valores ejemplos correspondientes a la tabla ‘torneo’*/
 INSERT INTO torneo VALUES(
 	1,
 	'Torneo De Ajedrez del sector Primaria Octubre 2016’,
@@ -97,7 +96,7 @@ INSERT INTO torneo VALUES(
 	5
 );
 
-
+/*Insertar valores ejemplos correspondientes a la tabla ‘concurso’*/
 INSERT INTO concurso VALUES(
 	1,
 	'Bonfil',
