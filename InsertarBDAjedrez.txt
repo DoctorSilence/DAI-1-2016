@@ -8,13 +8,13 @@ INSERT INTO escuela VALUES(
 INSERT INTO escuela VALUES(
 	2,
 	'ESNAJ Roma',
-	'Periferico'
+	‘Roma’
 );
 
 INSERT INTO escuela VALUES(
 	3,
 	'Springfield',
-	'Insurgentes'
+	‘División del Norte’
 );
 
 INSERT INTO escuela VALUES(
@@ -26,13 +26,13 @@ INSERT INTO escuela VALUES(
 INSERT INTO escuela VALUES(
 	5,
 	'Heraldos de México',
-	'Santa Fe'
+	‘Garita’
 );
 
 INSERT INTO escuela VALUES(
 	6,
 	'Olinca',
-	'Rio Hondo 1'
+	‘Periferico’
 );
 
 
