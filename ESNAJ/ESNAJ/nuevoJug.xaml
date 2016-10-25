@@ -6,7 +6,7 @@
         <Label Content="Datos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="25,66,0,0" VerticalAlignment="Top"/>
         <Label Content="Escuela" HorizontalAlignment="Left" Margin="25,97,0,0" VerticalAlignment="Top"/>
-        <Label Content="Torneos previos" HorizontalAlignment="Left" Margin="25,185,0,0" VerticalAlignment="Top"/>
+        <Label Content="Torneos previos" HorizontalAlignment="Left" Margin="25,159,0,0" VerticalAlignment="Top"/>
         <Label Content="Edad" HorizontalAlignment="Left" Margin="25,128,0,0" VerticalAlignment="Top"/>
 
     </Grid>
