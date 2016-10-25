@@ -1,1 +1,2 @@
 C:\Users\JSANCHEZAGU\Desktop\DAI-1-2016\ESNAJ\ESNAJ\bin\Debug\ESNAJ.exe.config
+F:\DesarrolloAplicacionesInf\ProyectoDAI\ESNAJ\ESNAJ\bin\Debug\ESNAJ.exe.config
