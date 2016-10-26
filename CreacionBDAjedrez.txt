@@ -29,8 +29,8 @@ CREATE TABLE concurso(
 	idConcurso int primary key,
 	categoria varchar(50) not null,
 	fecha datetime not null,
-	posicionFinal int not null,
-	puntajeObtenido float not null,
+	trofeo int,
+	puntajeObtenido float,
 	idAlumno int references alumno,
 	idTorneo int references torneo
 );
