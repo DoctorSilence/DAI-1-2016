@@ -59,5 +59,10 @@ namespace ESNAJ
             ventanaAnt.Show();
             this.Close();
         }
+
+        private void btAgregar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

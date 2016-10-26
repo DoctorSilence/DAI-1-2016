@@ -37,5 +37,10 @@ namespace ESNAJ
             ventana.Show();
             this.Visibility = System.Windows.Visibility.Hidden;
         }
+
+        private void btNuevoMaestro_Click(object sender, RoutedEventArgs e)
+        {
+            nuevoMaestro nm = new nuevoMaestro(this);
+        }
     }
 }
