@@ -83,6 +83,7 @@
     <Compile Include="elimina.xaml.cs">
       <DependentUpon>elimina.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Escuela.cs" />
     <Compile Include="Excel.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="MainWindow.xaml.cs">

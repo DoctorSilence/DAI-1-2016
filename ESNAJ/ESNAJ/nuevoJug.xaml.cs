@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,44 @@ namespace ESNAJ
     /// </summary>
     public partial class nuevoJug : Window
     {
-        public nuevoJug()
+        SqlConnection con;
+        SqlCommand cmm;
+
+        Menu ventanaAnt;
+
+        public nuevoJug(Menu ventanaMenu)
         {
+            ventanaAnt = ventanaMenu;
+
             InitializeComponent();
+            cbGrados.Items.Add("Pachón");
+            cbGrados.Items.Add("Peonina");
+            cbGrados.Items.Add("Bonifacio");
+            cbGrados.Items.Add("Bonfil");
+            cbGrados.Items.Add("Pedro");
+            cbGrados.Items.Add("Anabella");
+            cbGrados.Items.Add("Rey ESNAJ");
+            cbGrados.SelectedIndex = 0;
+
+            cbEscuelas.Items.Add("-----------------------------------");
+
+            con = MainWindow.conectarBase();
+            String query = "SELECT nombre FROM escuela";
+            cmm = new SqlCommand(query, con);
+            SqlDataReader lector = cmm.ExecuteReader();
+            lector.Read();
+            while (lector.Read())
+            {
+                cbEscuelas.Items.Add(lector.GetValue(0));
+            }
+            cbEscuelas.SelectedIndex = 0;
+
+        }
+
+        private void btRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            ventanaAnt.Show();
+            this.Close();
         }
     }
 }

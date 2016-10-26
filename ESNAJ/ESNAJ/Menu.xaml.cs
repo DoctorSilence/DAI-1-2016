@@ -23,5 +23,19 @@ namespace ESNAJ
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow ventana = new MainWindow();
+            ventana.Show();
+            this.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            nuevoJug ventana = new nuevoJug(this);
+            ventana.Show();
+            this.Visibility = System.Windows.Visibility.Hidden;
+        }
     }
 }
