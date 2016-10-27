@@ -1,4 +1,4 @@
-﻿﻿/*Se crea una tabla llamada 'escuela' para representar a la institución en donde estudia el concursante o alumno*/
+/*Se crea una tabla llamada 'escuela' para representar a la institución en donde estudia el concursante o alumno*/
 CREATE TABLE escuela(
 	idEscuela int primary key,
 	nombre varchar(50) not null,
@@ -23,7 +23,7 @@ CREATE TABLE torneo(
 	idEscuela int references escuela
 );
 
-/*Se crea la tabla 'concurso' para administrar los puntajes de cada concursante al final de cada 
+/*Se crea la tabla ‘participo’ para administrar los puntajes de cada concursante al final de cada 
 	concurso, así como datos más específicos de cuándo se llevó a cabo*/
 CREATE TABLE participo(
 	idParticipo int primary key,
