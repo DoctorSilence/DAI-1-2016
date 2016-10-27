@@ -4,17 +4,30 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\FORDUNAF\Desktop\DAI-1-2016\ESNAJ\ESNAJ\obj\Debug\
+=======
+F:\DesarrolloAplicacionesInf\ESNAJ\ESNAJ\ESNAJ\obj\Debug\
+>>>>>>> master
 ESNAJ
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\FORDUNAF\Desktop\DAI-1-2016\ESNAJ\ESNAJ\App.xaml
 51476569176
 
 16426127664
 17-1985492528
 elimina.xaml;MainWindow.xaml;Menu.xaml;nuevoJug.xaml;nuevoMaestro.xaml;
+=======
+F:\DesarrolloAplicacionesInf\ESNAJ\ESNAJ\ESNAJ\App.xaml
+5863602879
+
+17-1874119740
+17-1030889717
+elimina.xaml;MainWindow.xaml;Menu.xaml;modificar.xaml;nuevoJug.xaml;
+>>>>>>> master
 
 False
 

@@ -26,5 +26,14 @@ namespace ESNAJ
             this.categoria = categoria;
             this.torneos = torneos;
         }
+
+        public Jugador(int id, String cat, String nombre, String escuela)
+        {
+            this.id = id;
+            this.categoria = cat;
+            this.nombre = nombre;
+            this.escuela = escuela;
+        }
+
     }
 }

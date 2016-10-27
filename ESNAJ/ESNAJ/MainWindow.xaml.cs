@@ -27,7 +27,7 @@ namespace ESNAJ
         }
         public static SqlConnection conectarBase()
         {
-            String deConexion = "Data Source=112SALAS30;Initial Catalog=ESNAJ;User ID=sa;Password=sqladmin"; //-----------------------------------------------------------------------------------------
+            String deConexion = "Data Source=112SALAS31;Initial Catalog=ESNAJ; User ID=sa;Password=sqladmin"; //-----------------------------------------------------------------------------------------
             try
             {
                 SqlConnection con = new SqlConnection(deConexion); con.Open(); return con;

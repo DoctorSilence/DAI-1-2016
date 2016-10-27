@@ -73,5 +73,76 @@ namespace ESNAJ
             MessageBox.Show("Se leyó correctamente");
             return resp;
         }
+
+        public static List<Escuela> getEscuelas(String nomArchivo)
+        {
+            List<Escuela> resp = new List<Escuela>();
+            FileStream archivo = new FileStream(nomArchivo + ".xls", FileMode.Open, FileAccess.Read);
+            HSSFWorkbook libro = new HSSFWorkbook(archivo);
+            ISheet hoja = libro.GetSheetAt(0);
+            IRow fila;
+            ICell celda;
+            int id = 0;
+            String nombre = "";
+
+            for (int i = 1; i < hoja.LastRowNum; i++)
+            {
+                Escuela e;
+
+                fila = hoja.GetRow(i);
+                celda = fila.GetCell(0);
+                id = (int) celda.NumericCellValue;
+                celda = fila.GetCell(1);
+                nombre = celda.StringCellValue;
+                e = new Escuela(id, nombre);
+                resp.Add(e);
+            }
+            return resp;
+        }
+
+        public static List<Jugador> inscritosCargaAutomatica(String nomArchivo)
+        {
+            List<Jugador> resp = new List<Jugador>();
+            FileStream archivo = new FileStream(nomArchivo + ".xls", FileMode.Open, FileAccess.Read);
+            HSSFWorkbook libro = new HSSFWorkbook(archivo);
+            ISheet hoja = libro.GetSheetAt(0);
+            IRow fila;
+            ICell celda;
+            int id = 0;
+            String cat = "", nombre = "", escuela = "";
+
+            for (int i = 2; i < hoja.LastRowNum; i++)
+            {
+                Jugador j;
+
+                fila = hoja.GetRow(i);
+                celda = fila.GetCell(0);
+                if (celda != null && celda.CellType == CellType.Numeric)
+                    id = (int) celda.NumericCellValue;
+                else
+                    id = 0;
+
+                //SIEMPRE se manda una categoria
+                celda = fila.GetCell(1);
+                cat = celda.StringCellValue;
+
+                celda = fila.GetCell(2);
+                if (celda != null && celda.CellType != CellType.Blank)
+                    nombre = celda.StringCellValue;
+                else
+                    nombre = "";
+
+                //Verificar escuela
+                celda = fila.GetCell(3);
+                if (celda != null && celda.CellType != CellType.Blank)
+                    escuela = celda.StringCellValue;
+                else
+                    escuela = "";
+
+                j = new Jugador(id, cat, nombre, escuela);
+                resp.Add(j);
+            }
+            return resp;
+        }
     }
 }
