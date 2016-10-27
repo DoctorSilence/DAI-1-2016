@@ -2,7 +2,7 @@
 CREATE TABLE escuela(
 	idEscuela int primary key,
 	nombre varchar(50) not null,
-	direccion varchar(50) not null,
+	direccion varchar(50) not null
 );
 
 /*Se crea la tabla 'alumno' que representa a cada alumno inscrito en la ESNAJ*/
@@ -34,6 +34,7 @@ CREATE TABLE participo(
 	idAlumno int references alumno,
 	idTorneo int references torneo
 );
+
 
 /*Se crea la tabla para el manejo de las personas de la institución*/		
  CREATE TABLE usuariosGenerales()(		
