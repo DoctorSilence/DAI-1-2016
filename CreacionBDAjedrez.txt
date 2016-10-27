@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-﻿/*Se crea una tabla llamada 'escuela' para representar a la institución en donde estudia el concursante o alumno*/
+/*Se crea una tabla llamada 'escuela' para representar a la institución en donde estudia el concursante o alumno*/
 CREATE TABLE escuela(
 	idEscuela int primary key,
 	nombre varchar(50) not null,
-	direccion varchar(50) not null
 );
 
 /*Se crea la tabla 'alumno' que representa a cada alumno inscrito en la ESNAJ*/
@@ -13,7 +11,7 @@ CREATE TABLE alumno(
 	correo varchar(50) not null unique,
 	contra varchar(50) not null,
 	puntajeTotal float not null,
-	grado varchar(50) not null,
+	categoria varchar(50) not null,
 	idEscuela int references escuela
 );
 
@@ -21,68 +19,17 @@ CREATE TABLE alumno(
 CREATE TABLE torneo(
 	idTorneo int primary key,
 	nombre varchar(50) not null,
+	fecha datetime not null,
 	idEscuela int references escuela
 );
 
 /*Se crea la tabla 'concurso' para administrar los puntajes de cada concursante al final de cada 
 	concurso, así como datos más específicos de cuándo se llevó a cabo*/
-CREATE TABLE concurso(
-	idConcurso int primary key,
+CREATE TABLE participo(
+	idParticipo int primary key,
 	categoria varchar(50) not null,
-	fecha datetime not null,
-	posicionFinal int not null,
-	puntajeObtenido float not null,
-	idAlumno int references alumno,
-	idTorneo int references torneo
-);
-
-
-/*Se crea la tabla para el manejo de las personas de la institución*/
-CREATE TABLE usuariosGenerales()(
-	idUsuario varchar(50) primary key,
-	contraseña varchar(50) not null);
-
-=======
-﻿﻿/*Se crea una tabla llamada 'escuela' para representar a la institución en donde estudia el concursante o alumno*/
-CREATE TABLE escuela(
-	idEscuela int primary key,
-	nombre varchar(50) not null,
-	direccion varchar(50) not null
-);
-
-/*Se crea la tabla 'alumno' que representa a cada alumno inscrito en la ESNAJ*/
-CREATE TABLE alumno(
-	idAlumno int primary key,
-	nombre varchar(50) not null,
-	correo varchar(50) not null unique,
-	contra varchar(50) not null,
-	puntajeTotal float not null,
-	grado varchar(50) not null,
-	idEscuela int references escuela
-);
-
-/*Se crea la tabla 'torneo' para administrar los lugares en donde se hará un torneno de la ESNAJ*/
-CREATE TABLE torneo(
-	idTorneo int primary key,
-	nombre varchar(50) not null,
-	idEscuela int references escuela
-);
-
-/*Se crea la tabla 'concurso' para administrar los puntajes de cada concursante al final de cada 
-	concurso, así como datos más específicos de cuándo se llevó a cabo*/
-CREATE TABLE concurso(
-	idConcurso int primary key,
-	categoria varchar(50) not null,
-	fecha datetime not null,
 	trofeo int,
 	puntajeObtenido float,
 	idAlumno int references alumno,
 	idTorneo int references torneo
 );
-
-
-/*Se crea la tabla para el manejo de las personas de la institución*/
-CREATE TABLE usuariosGenerales()(
-	idUsuario varchar(50) primary key,
-	contraseña varchar(50) not null);
->>>>>>> master
